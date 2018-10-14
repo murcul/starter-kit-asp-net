@@ -4,19 +4,22 @@ import { routerReducer, routerMiddleware } from 'react-router-redux';
 import * as Counter from './Counter';
 import * as WeatherForecasts from './WeatherForecasts';
 
+declare var process;
+declare var window;
+
 export default function configureStore(history, initialState) {
   const reducers = {
-    counter: Counter.reducer,
-    weatherForecasts: WeatherForecasts.reducer
+    counter : Counter.reducer,
+    weatherForecasts : WeatherForecasts.reducer,
   };
 
-  const middleware = [
+  const middleware: any = [
     thunk,
-    routerMiddleware(history)
+    routerMiddleware(history),
   ];
 
   // In development, use the browser's Redux dev tools extension if installed
-  const enhancers = [];
+  const enhancers: any = [];
   const isDevelopment = process.env.NODE_ENV === 'development';
   if (isDevelopment && typeof window !== 'undefined' && window.devToolsExtension) {
     enhancers.push(window.devToolsExtension());
@@ -24,12 +27,12 @@ export default function configureStore(history, initialState) {
 
   const rootReducer = combineReducers({
     ...reducers,
-    routing: routerReducer
+    routing: routerReducer,
   });
 
   return createStore(
     rootReducer,
     initialState,
-    compose(applyMiddleware(...middleware), ...enhancers)
+    compose(applyMiddleware(...middleware), ...enhancers),
   );
 }

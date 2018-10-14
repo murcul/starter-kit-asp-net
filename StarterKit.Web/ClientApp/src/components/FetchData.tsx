@@ -4,7 +4,12 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { actionCreators } from '../store/WeatherForecasts';
 
-class FetchData extends Component {
+class FetchData extends Component<any, any> {
+
+  constructor(props) {
+    super(props);
+  }
+
   componentWillMount() {
     // This method runs when the component is first added to the page
     const startDateIndex = parseInt(this.props.match.params.startDateIndex, 10) || 0;
@@ -47,7 +52,7 @@ function renderForecastsTable(props) {
             <td>{forecast.temperatureC}</td>
             <td>{forecast.temperatureF}</td>
             <td>{forecast.summary}</td>
-          </tr>
+          </tr>,
         )}
       </tbody>
     </table>
@@ -66,6 +71,6 @@ function renderPagination(props) {
 }
 
 export default connect(
-  state => state.weatherForecasts,
-  dispatch => bindActionCreators(actionCreators, dispatch)
+  (state: any) => state.weatherForecasts,
+  dispatch => bindActionCreators(actionCreators, dispatch),
 )(FetchData);

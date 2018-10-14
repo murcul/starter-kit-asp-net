@@ -4,7 +4,7 @@ const initialState = { count: 0 };
 
 export const actionCreators = {
   increment: () => ({ type: incrementCountType }),
-  decrement: () => ({ type: decrementCountType })
+  decrement: () => ({ type: decrementCountType }),
 };
 
 export const reducer = (state, action) => {
