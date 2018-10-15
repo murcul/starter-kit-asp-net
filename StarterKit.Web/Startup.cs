@@ -62,6 +62,8 @@ namespace StarterKit.Web
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
+            DataMigrations.Migrate(app);
+
             app.UseAuthentication();
 
             app.UseMvc(routes =>
