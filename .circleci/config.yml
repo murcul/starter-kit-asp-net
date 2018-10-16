@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: microsoft/dotnet:2.1.300-sdk
+      - image: microsoft/dotnet:2.1-sdk
     steps:
       - checkout
       - run : dotnet restore
@@ -10,7 +10,7 @@ jobs:
       
   test:
     docker:
-      - image: microsoft/dotnet:2.1.300-sdk
+      - image: microsoft/dotnet:2.1-sdk
     steps:
       - checkout
       - run: dotnet  test ./StarterKit.UnitTests/StarterKit.UnitTests.csproj
