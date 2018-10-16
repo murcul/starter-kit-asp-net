@@ -20,4 +20,4 @@ jobs:
 
       - run: 
           name: build docker image
-          command : docker build -t starterkit ./StarterKit/starterKit.web
+          command : docker build -t starterkit ./StarterKit.Web
