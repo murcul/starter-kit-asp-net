@@ -5,5 +5,6 @@ jobs:
       - image: microsoft/dotnet:2.1-sdk
     steps:
       - checkout
+      - setup_remote_docker
       - run: dotnet test ./StarterKit.UnitTests/StarterKit.UnitTests.csproj
       - run: docker build -t starterkit ./starterkit.web
