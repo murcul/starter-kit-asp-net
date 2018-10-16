@@ -9,5 +9,5 @@ jobs:
 
     steps:
       - checkout
-      -run: docker build -t starterkit ./starterkit.web
+      - run: docker build -t starterkit ./starterkit.web
       
