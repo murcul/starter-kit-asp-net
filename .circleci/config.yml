@@ -5,12 +5,5 @@ jobs:
       - image: microsoft/dotnet:2.1-sdk
     steps:
       - checkout
-      - run : dotnet restore
-      - run: dotnet build
-      
-  test:
-    docker:
-      - image: microsoft/dotnet:2.1-sdk
-    steps:
-      - checkout
       - run: dotnet  test ./StarterKit.UnitTests/StarterKit.UnitTests.csproj
+      
