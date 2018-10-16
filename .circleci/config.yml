@@ -1,13 +1,13 @@
 version: 2
-  services:
-    -docker
 jobs:
   build:
     docker:
       - image: microsoft/dotnet:2.1-aspnetcore-runtime
     steps:
       - checkout
+      - run : dotnet restore
       - run: dotnet build
+      
   test:
     steps:
       - checkout
