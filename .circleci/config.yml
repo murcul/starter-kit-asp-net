@@ -6,8 +6,4 @@ jobs:
     steps:
       - checkout
       - run: dotnet test ./StarterKit.UnitTests/StarterKit.UnitTests.csproj
-
-    steps:
-      - checkout
       - run: docker build -t starterkit ./starterkit.web
-      
