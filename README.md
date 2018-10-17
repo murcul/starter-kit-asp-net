@@ -30,3 +30,10 @@ To run the application, execute the following command
     docker run -d -p 8080:80 -e PG_DATABASE_USER=postgres -e PG_DATABASE_PASS=<PASSWORD> -e PG_DATABASE_HOST=postgres -e PG_DATABASE_NAME=StarterKitDB --name starterkit --link my-postgres:postgres starterkit
     
 Erika!!! open your browser and go to http://localhost:8080/
+
+Note: If you want to run the application outside of docker environment, you need to added a .env file at the root of the application with the following content.
+
+    PG_DATABASE_USER = postgres
+    PG_DATABASE_PASS = <PASSWORD>
+    PG_DATABASE_HOST = localhost
+    PG_DATABASE_NAME = StarterKitDB
