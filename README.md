@@ -26,6 +26,7 @@ First, we need to generate our migrations file for our database schema. To do th
 Secondly, we need to change the postgres password in the appsettings.production.json file in our StarterKit.Web project to the password set when running the postgres command.
 
 To run the application, execute the following command
-    docker run -d -p 8080:80 -e PG_DATABASE_USER=postgres -e PG_DATABASE_PASS=emmanuel11 -e PG_DATABASE_HOST=postgres -e PG_DATABASE_NAME=StarterKitDB --name starterkit --link my-postgres:postgres starterkit
+
+    docker run -d -p 8080:80 -e PG_DATABASE_USER=postgres -e PG_DATABASE_PASS=<PASSWORD> -e PG_DATABASE_HOST=postgres -e PG_DATABASE_NAME=StarterKitDB --name starterkit --link my-postgres:postgres starterkit
     
 Erika!!! open your browser and go to http://localhost:8080/
