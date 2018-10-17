@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using dotenv.net.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Hosting;
@@ -12,6 +15,8 @@ using Microsoft.EntityFrameworkCore;
 using StarterKit.Web.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using StarterKit.Core.Models;
+using StarterKit.Core.Providers;
 
 namespace StarterKit.Web
 {
@@ -27,6 +32,17 @@ namespace StarterKit.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var envFile = ".env";
+
+            services.AddEnv(x =>
+            {
+                    x.AddEncoding(Encoding.Default)
+                    .AddEnvFile(Path.GetFullPath(envFile))
+                    .AddThrowOnError(false);
+            });
+
+            AppSettingsProvider.Register(new AppSettings());
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -35,8 +51,7 @@ namespace StarterKit.Web
             });
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                options.UseNpgsql(AppSettingsProvider.Current.DbConnection));
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
