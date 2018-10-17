@@ -17,7 +17,12 @@ After pulling the image, go ahead and build the image with the following command
 
 Note: the <Password> placeholder is for the desired password for your postgres database.
   
-Before we build the Application, let us first change the postgres password in the appsettings.production.json file in our StarterKit.Web project to the password set when running the postgres command.
+Before we build the Application, We need to do two things.
+
+First, we need to generate our migrations file for our database schema. To do this run the following command.
+    dotnet ef migrations add <name of migration>
+
+Secondly, we need to change the postgres password in the appsettings.production.json file in our StarterKit.Web project to the password set when running the postgres command.
 
 To run the application, execute the following command
     docker run -d -p 8080:80 --name starterkit --link my-postgres:postgres starterkit
