@@ -20,7 +20,8 @@ Note: the <Password> placeholder is for the desired password for your postgres d
 Before we build the Application, We need to do two things.
 
 First, we need to generate our migrations file for our database schema. To do this run the following command.
-    dotnet ef migrations add <name of migration>
+
+     dotnet ef migrations add <MIGRATIONNAME>
 
 Secondly, we need to change the postgres password in the appsettings.production.json file in our StarterKit.Web project to the password set when running the postgres command.
 
