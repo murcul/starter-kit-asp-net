@@ -13,19 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Framework", "04. Framew
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Tests", "05. Tests", "{9A6105FE-52B1-48B0-8ACD-78AF88980135}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarterKit.Web", "StarterKit.Web\StarterKit.Web.csproj", "{CF865884-7323-4DDD-9855-0B33C0215C1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarterKit.Web", "StarterKit.Web\StarterKit.Web.csproj", "{CF865884-7323-4DDD-9855-0B33C0215C1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarterKit.Core", "StarterKit.Core\StarterKit.Core.csproj", "{536202FB-FBD7-42F6-9A4D-D3DC8B174D9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarterKit.Core", "StarterKit.Core\StarterKit.Core.csproj", "{536202FB-FBD7-42F6-9A4D-D3DC8B174D9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starterkit.DomainServices", "Starterkit.DomainServices\Starterkit.DomainServices.csproj", "{8F13A538-44D5-4CB2-A0E4-620147C0D862}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Starterkit.DomainServices", "Starterkit.DomainServices\Starterkit.DomainServices.csproj", "{8F13A538-44D5-4CB2-A0E4-620147C0D862}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Startkit.AppServices", "Startkit.AppServices\Startkit.AppServices.csproj", "{E06A9366-1908-4B14-B8F4-9A0417CD0583}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Starterkit.AppServices", "Startkit.AppServices\Starterkit.AppServices.csproj", "{E06A9366-1908-4B14-B8F4-9A0417CD0583}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarterKit.Data", "StarterKit.Data\StarterKit.Data.csproj", "{0F223A29-1E7C-484A-A0CF-BCE7AEB1018C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarterKit.Data", "StarterKit.Data\StarterKit.Data.csproj", "{0F223A29-1E7C-484A-A0CF-BCE7AEB1018C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarterKit.IntegrationTests", "StarterKit.IntegrationTests\StarterKit.IntegrationTests.csproj", "{EB851EA2-DC32-4FF9-9E30-4B78AC9A4405}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarterKit.IntegrationTests", "StarterKit.IntegrationTests\StarterKit.IntegrationTests.csproj", "{EB851EA2-DC32-4FF9-9E30-4B78AC9A4405}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarterKit.UnitTests", "StarterKit.UnitTests\StarterKit.UnitTests.csproj", "{8E991498-73B6-4B59-B622-3903819329FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarterKit.UnitTests", "StarterKit.UnitTests\StarterKit.UnitTests.csproj", "{8E991498-73B6-4B59-B622-3903819329FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
